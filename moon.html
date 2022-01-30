@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body
+        {
+            background: linear-gradient(#200016,#10001f);
+            height: 100vh;
+            font-family: system-ui;
+        }
+        a
+        {
+            text-decoration: none;
+            color: #fff;
+        }
+        header
+        {
+            position: fixed;
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px;
+            z-index: 100;
+        }
+        header .logo
+        {
+            font-size: 30px;
+            text-transform: uppercase;
+            
+        }
+        header ul
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+        }
+        header ul li
+        {
+            margin-right: 30px;
+        }
+        header ul li a
+        {
+            padding: 6px 15px;
+            border-radius: 20px;
+        }
+        header ul li a:hover
+        {
+            background:#fff;
+            color: #200016;
+        }
+        header ul li .active
+        {
+            background:#fff;
+            color: #200016; 
+        }
+        .main
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+        }
+        .main::after
+        {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 100px;
+            width: 100%;
+            background:linear-gradient(to top,#200016,transparent)
+        }
+        .main img 
+        {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        #moon
+        {
+            mix-blend-mode: screen;
+            transform: translateY(80px);
+        }
+        .nouvil
+        {
+            color: white;
+            font-size: 25px;
+            text-transform: uppercase;
+            transform: translateY(-140px);
+        }
+        .content
+        {
+            color: #fff;
+            padding: 30px;
+        }
+        .content h2
+        {
+            margin: 20px;
+            font-size: 30px;
+        }
+        .content p
+        {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2><a href="#" class="logo">nouvil</a></h2>
+        <ul>
+            <li><a href="#" class="active">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section class="main">
+        <img src="stars1.png" id='stars'>
+        <h2 class="nouvil">nouvil</h2>
+        <img src="moon2.png" id='moon'>
+        <img src="mountains3.png" id='mountains3'>
+        <img src="mountains4.png" id="mountains4">
+        <img src="river5.png" id="river">
+        <img src="boat6.png" id="boat">
+        <img src="mountains7.png" id="mountains7">
+    </section>
+    <div class="content">
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis possimus facilis ducimus reprehenderit, sunt harum consectetur facere in cumque animi nihil quod. Adipisci at odio harum, voluptatum minima quasi cum fugiat impedit, accusamus debitis aspernatur tenetur aliquid ipsa aliquam quod consequatur quos totam esse commodi aperiam beatae. Eos, vero. Quibusdam, fugiat? Cum debitis, est veritatis ea, omnis ab illum quidem culpa mollitia adipisci et ipsam alias, natus aperiam distinctio doloribus cumque veniam odio. Deserunt voluptatem dicta, perferendis recusandae accusantium commodi omnis. Itaque dignissimos, illo veniam nemo facilis dolorum. Nobis assumenda dolorem cumque minima et saepe eum laudantium fugiat voluptates tenetur.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis possimus facilis ducimus reprehenderit, sunt harum consectetur facere in cumque animi nihil quod. Adipisci at odio harum, voluptatum minima quasi cum fugiat impedit, accusamus debitis aspernatur tenetur aliquid ipsa aliquam quod consequatur quos totam esse commodi aperiam beatae. Eos, vero. Quibusdam, fugiat? Cum debitis, est veritatis ea, omnis ab illum quidem culpa mollitia adipisci et ipsam alias, natus aperiam distinctio doloribus cumque veniam odio. Deserunt voluptatem dicta, perferendis recusandae accusantium commodi omnis. Itaque dignissimos, illo veniam nemo facilis dolorum. Nobis assumenda dolorem cumque minima et saepe eum laudantium fugiat voluptates tenetur.</p><br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis possimus facilis ducimus reprehenderit, sunt harum consectetur facere in cumque animi nihil quod. Adipisci at odio harum, voluptatum minima quasi cum fugiat impedit, accusamus debitis aspernatur tenetur aliquid ipsa aliquam quod consequatur quos totam esse commodi aperiam beatae. Eos, vero. Quibusdam, fugiat? Cum debitis, est veritatis ea, omnis ab illum quidem culpa mollitia adipisci et ipsam alias, natus aperiam distinctio doloribus cumque veniam odio. Deserunt voluptatem dicta, perferendis recusandae accusantium commodi omnis. Itaque dignissimos, illo veniam nemo facilis dolorum. Nobis assumenda dolorem cumque minima et saepe eum laudantium fugiat voluptates tenetur.</p><br>
+    </div>
+    <script>
+
+        let stars = document.getElementById('stars');
+        let moon = document.getElementById('moon');
+        let mountains3 = document.getElementById('mountains3');
+        let mountains4 = document.getElementById('mountains4');
+        let river = document.getElementById('river');
+        let boat = document.getElementById('boat');
+        let nouvil = document.querySelector('.nouvil');
+        window.onscroll = function()
+        {
+            var value =scrollY;
+            stars.style.left = value +"px"
+            moon.style.top = value * 4 +"px"
+            mountains3.style.top = value * 2 +"px"
+            mountains4.style.top = value * 1.5 +"px"
+            river.style.top = value +"px"
+            boat.style.top = value +"px"
+            boat.style.left = value * 3 +"px"
+            nouvil.style.fontSize = value +"px"
+            if(scrollY >= 67)
+            {
+                nouvil.style.fontSize = 67 +"px";
+                nouvil.style.position = 'fixed';
+            if(scrollY >= 478)
+            {
+                nouvil.style.display = 'none';
+            }    
+            else 
+            {
+                nouvil.style.display = 'block';
+            }
+            if(scrollY >= 120)
+            {
+                document.querySelector('.main').style.background = 'linear-gradient(#376281,#10001f)'
+            }
+            else
+            {
+                document.querySelector('.main').style.background = 'linear-gradient(#200016,#10001f)' 
+            }
+            }
+
+        }
+    </script>
+</body>
+</html>
